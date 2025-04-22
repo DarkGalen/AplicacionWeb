@@ -1,6 +1,6 @@
 package enums;
 
-public enum Genero {
+public enum tipoGenero {
     ACCION,
     AVENTURAS,
     TERROR,

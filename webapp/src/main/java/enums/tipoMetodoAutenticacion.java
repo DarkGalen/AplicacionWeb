@@ -1,5 +1,5 @@
 package enums;
 
-public enum MetodoAutenticacion {
+public enum tipoMetodoAutenticacion {
     CONTRASENA, GOOGLE_OAUTH
 }

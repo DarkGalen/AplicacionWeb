@@ -1,5 +1,5 @@
 package enums;
 
-public enum EstadoLibro {
+public enum tipoEstadoLibro {
     NUEVO, USADO
 }

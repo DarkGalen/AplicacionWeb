@@ -1,5 +1,5 @@
 package enums;
 
-public enum MetodoContacto {
+public enum tipoMetodoContacto {
     CHAT, EMAIL
 }

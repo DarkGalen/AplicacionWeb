@@ -1,5 +1,5 @@
 package enums;
 
-public enum MotivoEliminacion {
+public enum tipoMotivoEliminacion {
     VOLUNTARIA, INFRACCION
 }
