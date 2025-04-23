@@ -1,0 +1,10 @@
+dao\ManagerUsuarios.class
+classes\UsuarioImpl.class
+enums\tipoEstadoLibro.class
+enums\tipoGenero.class
+services\AgregaUsuarioServlet.class
+classes\Usuario.class
+enums\tipoMetodoAutenticacion.class
+enums\tipoMetodoContacto.class
+enums\tipoMotivoEliminacion.class
+services\FiltrarUsuariosPorNombreServlet.class
