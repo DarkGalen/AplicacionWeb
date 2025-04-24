@@ -43,7 +43,8 @@ public class FiltrarUsuariosPorNombreServlet extends HttpServlet{
 				String nombreUsuario = usuario.getNombre();
 				if(nombreUsuario.contains(nombre)) {
 					JSONObject objetoJSON = new JSONObject();
-					
+
+					objetoJSON.put("idUsuario",usuario.getIdUsuario());
 					objetoJSON.put("nombre",usuario.getNombre());
 					objetoJSON.put("apellidos",usuario.getApellidos());
 					objetoJSON.put("correoElectronico",usuario.getCorreoElectronico());

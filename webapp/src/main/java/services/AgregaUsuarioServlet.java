@@ -3,7 +3,6 @@ package services;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.servlet.ServletException;
@@ -24,7 +23,7 @@ public class AgregaUsuarioServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     // Lista temporal para almacenar artículos añadidos dinámicamente
-    private static List<Usuario> listaDinamica = ManagerUsuarios.getUsuarios();
+    //private static List<Usuario> listaDinamica = ManagerUsuarios.getUsuarios();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -35,6 +34,7 @@ public class AgregaUsuarioServlet extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
 
         // Obtener parámetros del formulario
+        int idUsuario = Integer.parseInt(request.getParameter("idUsuario"));
         String nombre = request.getParameter("nombre");
         String apellidos = request.getParameter("apellidos");
         String correoElectronico = request.getParameter("correoElectronico");
@@ -48,7 +48,7 @@ public class AgregaUsuarioServlet extends HttpServlet {
                         .map(tipoGenero::valueOf) // Convertir el string en un valor del enum Genero
                         .toArray(tipoGenero[]::new));
 
-        String metodoAutenticacion = request.getParameter("metodoAutenticacion");
+        tipoMetodoAutenticacion metodoAutenticacion = tipoMetodoAutenticacion.valueOf(request.getParameter("metodoAutenticacion"));
 
         String librosEnVentaStr = request.getParameter("librosEnVenta");
         // Convertir los libros en venta seleccionados en una lista de enteros
@@ -58,7 +58,7 @@ public class AgregaUsuarioServlet extends HttpServlet {
                         .toArray(Integer[]::new)); // Convertir a un array de enteros
 
         // Crear nuevo usuario
-        Usuario nuevo = new UsuarioImpl(nombre, apellidos, correoElectronico, contrasenya, numeroTelefono, fotoPerfil,
+        Usuario nuevo = new UsuarioImpl(idUsuario, nombre, apellidos, correoElectronico, contrasenya, numeroTelefono, fotoPerfil,
                 generosPreferidos, librosEnVenta, metodoAutenticacion);
 
         // Usar directamente el método del DAO como repositorio

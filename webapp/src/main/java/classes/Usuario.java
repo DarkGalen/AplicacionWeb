@@ -2,8 +2,13 @@ package classes;
 
 import java.util.List;
 import enums.tipoGenero;
+import enums.tipoMetodoAutenticacion;
 
 public interface Usuario {
+
+    int getIdUsuario();
+
+    void setIdUsuario(int idUsuario);
 
 	String getNombre();
 
@@ -37,8 +42,8 @@ public interface Usuario {
 
     void setLibrosEnVenta(List<Integer> librosEnVenta);
 
-    String getMetodoAutenticacion();
+    tipoMetodoAutenticacion getMetodoAutenticacion();
 
-    void setMetodoAutenticacion(String metodoAutenticacion);
+    void setMetodoAutenticacion(tipoMetodoAutenticacion metodoAutenticacion);
   
 }

@@ -13,19 +13,59 @@
         <!-- ==================== MÉTODO GET ==================== -->
         <h3> Consultas por método GET</h3>
 
+        <!-- Listar libros -->
+        <h4>Listar libros</h4>
+        <form action="listarLibros" method="get">
+            <input type="submit" value="Listar Libros">
+        </form>
+
+        <br>
+
+        <!-- Listar usuarios -->
+        <h4>Listar usuarios</h4>
+        <form action="listarUsuarios" method="get">
+            <input type="submit" value="Listar Usuarios">
+        </form>
+
         <!-- ==================== MÉTODO POST ==================== -->
         <h3>Consultas por método POST</h3>
 
+        <!-- Iniciar sesión -->
+        <h4>Iniciar sesión</h4>
+        <form action="iniciarSesion" method="post">
+            <label>Correo electrónico:</label>
+            <input type="text" name="correoElectronico" required>
+            <label>Contraseña:</label>
+            <input type="password" name="contrasenya" required>
+            <input type="submit" value="Iniciar Sesión">
+        </form><br>
+
         <!-- Filtrar usuarios por nombre -->
+        <h4>Filtrar usuarios por nombre</h4>
         <form action="filtrarUsuariosPorNombre" method="post">
             <label>Nombre de usuario:</label>
             <input type="text" name="nombre" required>
             <input type="submit" value="Filtrar Usuarios por Nombre">
-        </form>
+        </form><br>
+
+        <!-- Eliminar usuario -->
+        <h4>Eliminar usuario</h4>
+        <form action="eliminarUsuario" method="post">
+            <label>Correo del usuario:</label>
+            <input type="text" name="correoElectronico" required>
+            <label>Motivo:</label>
+            <select name="motivo" required>
+                <option value="VOLUNTARIA">Voluntaria</option>
+                <option value="INFRACCION">Infracción</option>
+            </select>
+            <input type="submit" value="Eliminar Usuario">
+        </form><br>
 
         <!-- Añadir nuevo usuario -->
-         <h3>Añadir nuevo usuario</h3>
+        <h4>Añadir nuevo usuario</h4>
         <form action="agregaUsuario" method="post">
+            <label>ID de usuario:</label>
+            <input type="text" name="idUsuario" required>
             <label>Nombre de usuario:</label>
             <input type="text" name="nombre" required>
             <label>Apellido de usuario:</label>
@@ -48,7 +88,7 @@
             <label><input type="checkbox" name="generosPreferidos[]" value="HISTORIA"> HISTORIA</label>
             <label><input type="checkbox" name="generosPreferidos[]" value="OTROS"> OTROS</label>
             <label>Libros en Venta (IDs):</label>
-            <input type="text" name="librosEnVenta" placeholder="Separar por comas" required>
+            <input type="text" name="librosEnVenta" placeholder="Separar por comas">
             <label>Método de Autenticación:</label>
             <label><input type="radio" name="metodoAutenticacion" value="CONTRASENYA"> CONTRASENYA</label>
             <label><input type="radio" name="metodoAutenticacion" value="GOOGLE_OAUTH"> GOOGLE_OAUTH</label>
@@ -59,4 +99,5 @@
         <br><br>
         <p>Los resultados aparecerán en pantalla en formato JSON directamente desde el servidor.</p>
     </body>
+
     </html>

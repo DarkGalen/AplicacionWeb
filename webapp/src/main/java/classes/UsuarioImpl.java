@@ -2,63 +2,75 @@ package classes;
 
 import java.util.List;
 import enums.tipoGenero;
+import enums.tipoMetodoAutenticacion;
 
 public class UsuarioImpl implements Usuario {
-	
-	private String nombre, apellidos, correoElectronico, contrasenya, fotoPerfil, metodoAutenticacion;
+
+    private String nombre, apellidos, correoElectronico, contrasenya, fotoPerfil;
+    private tipoMetodoAutenticacion metodoAutenticacion;
     private List<Integer> librosEnVenta;
     private List<tipoGenero> generosPreferidos;
-    private int numeroTelefono;
+    private int idUsuario, numeroTelefono;
 
-	public UsuarioImpl(String nombre, String apellidos, String correoElectronico, String contrasenya, int numeroTelefono, String fotoPerfil, List<tipoGenero> generosPreferidos, List<Integer> librosEnVenta, String metodoAutenticacion) {
-		super();
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.correoElectronico = correoElectronico;
-		this.contrasenya = contrasenya;
+    public UsuarioImpl(int idUsuario, String nombre, String apellidos, String correoElectronico, String contrasenya,
+            int numeroTelefono, String fotoPerfil, List<tipoGenero> generosPreferidos, List<Integer> librosEnVenta,
+            tipoMetodoAutenticacion metodoAutenticacion) {
+        super();
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.correoElectronico = correoElectronico;
+        this.contrasenya = contrasenya;
         this.numeroTelefono = numeroTelefono;
         this.fotoPerfil = fotoPerfil;
         this.generosPreferidos = generosPreferidos;
         this.librosEnVenta = librosEnVenta;
         this.metodoAutenticacion = metodoAutenticacion;
-	}
-	
+    }
 
-	// ----------------------------- Metodos Get y Set -----------------------------------------//
-	public String getNombre() {
-		return nombre;
-	}
+    // ----------------------------- Metodos Get y Set
+    // -----------------------------------------//
+    public int getIdUsuario() {
+        return idUsuario;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-		
-	}
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
 
-	public String getApellidos() {
-		return apellidos;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
-		
-	}
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
 
-	public String getCorreoElectronico() {
-		return correoElectronico;
-	}
+    }
 
-	public void setCorreoElectronico(String correoElectronico) {
-		this.correoElectronico = correoElectronico;
-		
-	}
+    public String getApellidos() {
+        return apellidos;
+    }
 
-	public String getContrasenya() {
-		return contrasenya;
-	}
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
 
-	public void setContrasenya(String contrasenya) {
-		this.contrasenya = contrasenya;
-	}
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+
+    }
+
+    public String getContrasenya() {
+        return contrasenya;
+    }
+
+    public void setContrasenya(String contrasenya) {
+        this.contrasenya = contrasenya;
+    }
 
     public int getNumeroTelefono() {
         return numeroTelefono;
@@ -92,11 +104,11 @@ public class UsuarioImpl implements Usuario {
         this.librosEnVenta = librosEnVenta;
     }
 
-    public String getMetodoAutenticacion() {
+    public tipoMetodoAutenticacion getMetodoAutenticacion() {
         return metodoAutenticacion;
     }
 
-    public void setMetodoAutenticacion(String metodoAutenticacion) {
+    public void setMetodoAutenticacion(tipoMetodoAutenticacion metodoAutenticacion) {
         this.metodoAutenticacion = metodoAutenticacion;
     }
 }
