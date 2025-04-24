@@ -11,9 +11,10 @@ public class LibroImpl implements Libro {
     private Float precio;
     private tipoEstadoLibro estado;
 
-	public LibroImpl(Integer idLibro, String titulo, String autor, String sinopsis, tipoGenero genero, Float precio, tipoEstadoLibro estado, String imagenUno, String imagenDos, String fechaPublicacion) {
-		super();
-		this.idLibro = idLibro;
+    public LibroImpl(Integer idLibro, String titulo, String autor, String sinopsis, tipoGenero genero, Float precio,
+            tipoEstadoLibro estado, String imagenUno, String imagenDos, String fechaPublicacion) {
+        super();
+        this.idLibro = idLibro;
         this.titulo = titulo;
         this.autor = autor;
         this.sinopsis = sinopsis;
@@ -23,10 +24,10 @@ public class LibroImpl implements Libro {
         this.imagenUno = imagenUno;
         this.imagenDos = imagenDos;
         this.fechaPublicacion = fechaPublicacion;
-	}
-	
+    }
 
-	// ----------------------------- Metodos Get y Set -----------------------------------------//
+    // ----------------------------- Metodos Get y Set
+    // -----------------------------------------//
 
     public Integer getIdLibro() {
         return idLibro;

@@ -35,8 +35,58 @@
             <input type="submit" value="Listar Usuarios Eliminados">
         </form>
 
+        <br>
+
+        <!-- Listar mensajes -->
+        <h4>Listar mensajes</h4>
+        <form action="listarMensajes" method="get">
+            <input type="submit" value="Listar Mensajes">
+        </form>
+
+        <br>
+
+        <!-- Listar calificaciones -->
+        <h4>Listar calificaciones</h4>
+        <form action="listarCalificaciones" method="get">
+            <input type="submit" value="Listar Calificaciones">
+        </form>
+
         <!-- ==================== MÉTODO POST ==================== -->
         <h3>Consultas por método POST</h3>
+
+        <!-- Calificar usuario -->
+        <h4>Calificar usuario</h4>
+        <form action="calificarUsuario" method="post">
+            <label>Id del usuario que califica:</label>
+            <input type="number" name="idCalificador" required>
+            <label>Id del usuario calificado:</label>
+            <input type="number" name="idCalificado" required>
+            <label>Calificación (1-5):</label>
+            <input type="number" name="calificacion" min="1" max="5" required>
+            <label>Comentario:</label>
+            <textarea name="comentario" required></textarea>
+            <input type="submit" value="Calificar Usuario">
+        </form><br>
+
+        <!-- Enviar mensaje -->
+        <h4>Enviar mensaje</h4>
+        <form action="enviarMensaje" method="post">
+            <label>Id del remitente:</label>
+            <input type="number" name="idRemitente" required>
+            <label>Id del destinatario:</label>
+            <input type="number" name="idDestinatario" required>
+            <label>Mensaje:</label>
+            <textarea name="mensaje" required></textarea>
+            <input type="submit" value="Enviar Mensaje">
+        </form><br>
+
+        <!-- Filtrar mensajes por id -->
+        <h4>Filtrar mensajes por id</h4>
+        <form action="filtrarMensajesPorId" method="post">
+            <label>Id del destinatario o remitente:</label>
+            <input type="number" name="id" required>
+            <input type="submit" value="Filtrar Mensaje por ID">
+        </form><br>
 
         <!-- Iniciar sesión -->
         <h4>Iniciar sesión</h4>
