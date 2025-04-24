@@ -51,6 +51,21 @@
             <input type="submit" value="Listar Calificaciones">
         </form>
 
+        <!-- Listar librerias -->
+        <h4>Listar librerías</h4>
+        <form action="listarLibrerias" method="get">
+            <input type="submit" value="Listar Librerías">
+        </form>
+
+        <br>
+
+        <!-- Listar ventas -->
+        <h4>Listar ventas</h4>
+        <form action="listarVentas" method="get">
+            <input type="submit" value="Listar Ventas">
+        </form>
+        
+
         <!-- ==================== MÉTODO POST ==================== -->
         <h3>Consultas por método POST</h3>
 
@@ -119,22 +134,78 @@
             <input type="submit" value="Eliminar Usuario">
         </form><br>
 
+        <!-- Añadir venta -->
+        <h4>Añadir venta</h4>
+        <form action="agregarVenta" method="post">
+            <label>ID de la transacción:</label>
+            <input type="number" name="idTransaccion" required>
+            <label>ID del comprador:</label>
+            <input type="number" name="idComprador" required>
+            <label>ID del vendedor:</label>
+            <input type="number" name="idVendedor" required>
+            <label>ID del libro vendido:</label>
+            <input type="number" name="idLibroVendido" required>
+            <label>Precio de venta:</label>
+            <input type="number" name="precioVenta" step="0.1" required>
+            <label>Fecha de venta:</label>
+            <input type="date" name="fechaVenta" required>
+            <input type="submit" value="Agregar Venta">
+        </form><br>
+
         <!-- Añadir libro -->
         <h4>Añadir libro</h4>
         <form action="agregarLibro" method="post">
+            <label>ID del usuario</label>
+            <input type="number" name="idUsuario" required>
             <label>ID del libro:</label>
-            <input type="text" name="idLibro" required>
+            <input type="number" name="idLibro" required>
             <label>Título del libro:</label>
             <input type="text" name="titulo" required>
             <label>Autor del libro:</label>
             <input type="text" name="autor" required>
+            <label>Sinopsis del libro:</label>
+            <textarea name="sinopsis" required></textarea>
             <label>Género del libro:</label>
-            <input type="text" name="genero" required>
+            <select name="genero" required>
+                <option value="ACCION">Acción</option>
+                <option value="AVENTURA">Aventura</option>
+                <option value="TERROR">Terror</option>
+                <option value="ROMANCE">Romance</option>
+                <option value="FANTASIA">Fantasía</option>
+                <option value="CIENCIA_FICCION">Ciencia Ficción</option>
+                <option value="HISTORIA">Historia</option>
+                <option value="OTROS">Otros</option>
+            </select>
             <label>Precio del libro:</label>
             <input type="number" name="precio" step="0.1" required>
-            <label>Descripción del libro:</label>
-            <textarea name="descripcion" required></textarea>
+            <label>Estado del libro:</label>
+            <select name="estado" required>
+                <option value="NUEVO">Nuevo</option>
+                <option value="USADO">Usado</option>
+            </select>
+            <label>Imagen 1 (URL):</label>
+            <input type="url" name="imagenUno" required>
+            <label>Imagen 2 (URL):</label>
+            <input type="url" name="imagenDos">
+            <label>Fecha de publicación:</label>
+            <input type="date" name="fechaPublicacion" required>
             <input type="submit" value="Agregar Libro">
+        </form><br>
+
+        <!-- Añadir libreria -->
+        <h4>Añadir librería</h4>
+        <form action="agregarLibreria" method="post">
+            <label>Nombre de la librería:</label>
+            <input type="text" name="nombre" required>
+            <label>Correo electrónico:</label>
+            <input type="email" name="correoElectronico" required>
+            <label>Ubicación de la librería:</label>
+            <input type="text" name="ubicacion" required>
+            <label>URL del sitio web:</label>
+            <input type="url" name="urlSitioWeb" required>
+            <label>Catálogo de libros (IDs separados por comas):</label>
+            <input type="text" name="catalogoLibros" placeholder="Ejemplo: 1,2,3" required>
+            <input type="submit" value="Agregar Librería">
         </form><br>
 
         <!-- Añadir nuevo usuario -->

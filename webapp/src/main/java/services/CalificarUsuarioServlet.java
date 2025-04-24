@@ -18,9 +18,6 @@ public class CalificarUsuarioServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
-    // Lista temporal para almacenar artículos añadidos dinámicamente
-    //private static List<Usuario> listaDinamica = ManagerUsuarios.getUsuarios();
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
