@@ -1,3 +1,4 @@
+c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\classes\UsuarioEliminado.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\enums\tipoMotivoEliminacion.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\services\FiltrarUsuariosPorNombreServlet.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\services\ListarUsuariosServlet.java
@@ -10,8 +11,10 @@ c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\classes\Libro.
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\services\AgregaUsuarioServlet.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\enums\tipoEstadoLibro.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\services\ListarLibrosServlet.java
+c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\services\ListarUsuariosEliminadosServlet.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\services\EliminarUsuarioServlet.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\classes\Usuario.java
+c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\classes\UsuarioEliminadoImpl.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\dao\ManagerLibros.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\services\IniciarSesionServlet.java
 c:\Users\carlo\Desktop\PDM\PruebaJava\WebApp\webapp\src\main\java\enums\tipoGenero.java

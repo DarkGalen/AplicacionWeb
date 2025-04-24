@@ -16,6 +16,7 @@ public class UsuarioImpl implements Usuario {
             int numeroTelefono, String fotoPerfil, List<tipoGenero> generosPreferidos, List<Integer> librosEnVenta,
             tipoMetodoAutenticacion metodoAutenticacion) {
         super();
+        this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correoElectronico = correoElectronico;

@@ -2,17 +2,17 @@ package dao;
 
 import java.util.LinkedList;
 import java.util.List;
-import classes.Usuario;
+import classes.UsuarioEliminado;
 
 public class ManagerUsuariosEliminados {
 
-    static List<Usuario> lista = new LinkedList<Usuario>();
+    static List<UsuarioEliminado> lista = new LinkedList<UsuarioEliminado>();
 
-    public static List<Usuario> getUsuarios() {
+    public static List<UsuarioEliminado> getUsuarios() {
         return lista;
     }
 
-    public void addUsuario(Usuario u) {
+    public static void addUsuario(UsuarioEliminado u) {
         lista.add(u);
     }
 }

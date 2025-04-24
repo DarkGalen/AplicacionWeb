@@ -27,6 +27,14 @@
             <input type="submit" value="Listar Usuarios">
         </form>
 
+        <br>
+
+        <!-- Listar usuarios eliminados -->
+        <h4>Listar usuarios eliminados</h4>
+        <form action="listarUsuariosEliminados" method="get">
+            <input type="submit" value="Listar Usuarios Eliminados">
+        </form>
+
         <!-- ==================== MÉTODO POST ==================== -->
         <h3>Consultas por método POST</h3>
 

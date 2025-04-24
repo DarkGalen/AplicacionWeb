@@ -3,10 +3,12 @@ enums\tipoMetodoContacto.class
 services\ListarLibrosServlet.class
 enums\tipoMotivoEliminacion.class
 classes\LibroImpl.class
+classes\UsuarioEliminado.class
 dao\ManagerUsuarios.class
 classes\UsuarioImpl.class
 enums\tipoEstadoLibro.class
 enums\tipoGenero.class
+services\ListarUsuariosEliminadosServlet.class
 services\AgregaUsuarioServlet.class
 services\IniciarSesionServlet.class
 classes\Usuario.class
@@ -14,5 +16,6 @@ services\EliminarUsuarioServlet.class
 classes\Libro.class
 enums\tipoMetodoAutenticacion.class
 dao\ManagerLibros.class
+classes\UsuarioEliminadoImpl.class
 dao\ManagerUsuariosEliminados.class
 services\FiltrarUsuariosPorNombreServlet.class
